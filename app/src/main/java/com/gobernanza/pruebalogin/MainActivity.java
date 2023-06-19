@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void GoToHome(String email) {
-        Intent intent = new Intent(this,Home.class);
+        Intent intent = new Intent(this,HomeActivity2.class);
         intent.putExtra("Correo",email);
         startActivity(intent);
     }

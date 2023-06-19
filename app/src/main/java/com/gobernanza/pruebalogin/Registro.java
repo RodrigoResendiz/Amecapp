@@ -82,8 +82,11 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void GoToHome(String emaail) {
-        Intent secundario = new Intent(this,Home.class);
+        Intent secundario = new Intent(this,HomeActivity2.class);
         startActivity(secundario);
+        secundario.putExtra("nombre", (CharSequence) nombre);
+        secundario.putExtra("apellido", (CharSequence) apellido);
+        secundario.putExtra("cp", (CharSequence) CP);
     }
 
 
