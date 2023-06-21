@@ -2,8 +2,6 @@ package com.gobernanza.pruebalogin;
 
 import android.os.Bundle;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -11,8 +9,10 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.gobernanza.pruebalogin.databinding.ActivityHome2Binding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class HomeActivity2 extends AppCompatActivity implements NotasIteractionListener{
+public class HomeActivity2 extends AppCompatActivity  {
+
 
     private ActivityHome2Binding binding;
 
@@ -32,16 +32,9 @@ public class HomeActivity2 extends AppCompatActivity implements NotasIteractionL
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_home2);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-    }
-
-
-    @Override
-    public void editarPerfil(perfil perfil) {
 
     }
 
-    @Override
-    public void eliminarPerfil(perfil perfil) {
 
-    }
+
 }

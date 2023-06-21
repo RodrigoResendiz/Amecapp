@@ -83,6 +83,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:text="REGISTRARME"
+        app:backgroundTint="@color/material_dynamic_neutral50"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextCP"
         app:layout_constraintStart_toStartOf="@+id/editTextTextCP"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextCP" />
