@@ -19,6 +19,18 @@
         <action
             android:id="@+id/action_navigation_dashboard_to_obrasPublicasFragment"
             app:destination="@id/obrasPublicasFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_alumbradoPublicoFragment"
+            app:destination="@id/alumbradoPublicoFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_parkGardenFragment"
+            app:destination="@id/parkGardenFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_aseoPublicoFragment"
+            app:destination="@id/aseoPublicoFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_siapameFragment"
+            app:destination="@id/siapameFragment" />
     </fragment>
 
     <fragment
@@ -33,6 +45,42 @@
         tools:layout="@layout/fragment_obras_publicas" >
         <action
             android:id="@+id/action_obrasPublicasFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/alumbradoPublicoFragment"
+        android:name="com.gobernanza.pruebalogin.AlumbradoPublicoFragment"
+        android:label="fragment_alumbrado_publico"
+        tools:layout="@layout/fragment_alumbrado_publico" >
+        <action
+            android:id="@+id/action_alumbradoPublicoFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/aseoPublicoFragment"
+        android:name="com.gobernanza.pruebalogin.AseoPublicoFragment"
+        android:label="fragment_aseo_publico"
+        tools:layout="@layout/fragment_aseo_publico" >
+        <action
+            android:id="@+id/action_aseoPublicoFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/parkGardenFragment"
+        android:name="com.gobernanza.pruebalogin.ParkGardenFragment"
+        android:label="fragment_park_garden"
+        tools:layout="@layout/fragment_park_garden" >
+        <action
+            android:id="@+id/action_parkGardenFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/siapameFragment"
+        android:name="com.gobernanza.pruebalogin.SiapameFragment"
+        android:label="fragment_siapame"
+        tools:layout="@layout/fragment_siapame" >
+        <action
+            android:id="@+id/action_siapameFragment_to_navigation_dashboard"
             app:destination="@id/navigation_dashboard" />
     </fragment>
 </navigation>

@@ -23,12 +23,15 @@ public class ReporteFragment extends Fragment  {
 
         btnSiapame = requireView().findViewById(R.id.buttonSIAPAME);
         btnObrasPublicas = requireView().findViewById(R.id.buttonObrasPublicas);
+        btnAlumPub = requireView().findViewById(R.id.buttonaAlumbradoPublico);
+        btnAsePub = requireView().findViewById(R.id.buttonAseoPublico);
+        btnGarden = requireView().findViewById(R.id.buttonPark);
 
         btnSiapame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(v.getId()== R.id.buttonSIAPAME){
-                   // Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_reportesActivity);
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_siapameFragment);
                 }
             }
         });
@@ -38,6 +41,33 @@ public class ReporteFragment extends Fragment  {
             public void onClick(View v) {
                 if (v.getId() == R.id.buttonObrasPublicas){
                     Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
+                }
+            }
+        });
+
+        btnAlumPub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.buttonaAlumbradoPublico){
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_alumbradoPublicoFragment);
+                }
+            }
+        });
+
+        btnAsePub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(v.getId() == R.id.buttonAseoPublico){
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_aseoPublicoFragment);
+                }
+            }
+        });
+
+        btnGarden.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.buttonPark){
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_parkGardenFragment);
                 }
             }
         });
