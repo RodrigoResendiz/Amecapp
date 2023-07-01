@@ -1,8 +1,5 @@
 package com.gobernanza.pruebalogin;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,14 +7,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     EditText nombre, apellido, correo, password, CP;
     TextView Return;
@@ -83,10 +85,11 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     private void GoToHome(String emaail) {
         Intent secundario = new Intent(this,HomeActivity2.class);
+        secundario.putExtra("nombre", nombre.getText().toString());
+       // secundario.putExtra("apellido", (CharSequence) apellido);
+       // secundario.putExtra("cp", (CharSequence) CP);
+        secundario.putExtra("correoEmail", correo.getText().toString());
         startActivity(secundario);
-        secundario.putExtra("nombre", (CharSequence) nombre);
-        secundario.putExtra("apellido", (CharSequence) apellido);
-        secundario.putExtra("cp", (CharSequence) CP);
     }
 
 

@@ -23,17 +23,17 @@
             app:layout_constraintHorizontal_bias="0.152"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.218" />
+            app:layout_constraintVertical_bias="0.064" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/etNamePerfil"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:enabled="false"
+            android:hint="Nombre"
             android:inputType="textPersonName"
-            android:text="Name"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,24 +49,35 @@
             android:text="Apellido"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintStart_toStartOf="@+id/etNamePerfil"
+            app:layout_constraintTop_toBottomOf="@+id/etNamePerfil" />
 
         <EditText
-            android:id="@+id/editTextLastNamePerfil"
+            android:id="@+id/etLastNamePerfil"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="56dp"
             android:ems="10"
             android:enabled="false"
+            android:hint="Apellido"
             android:inputType="textPersonName"
-            android:text="Apellido"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textLastNamePerfil"
             app:layout_constraintTop_toBottomOf="@+id/textLastNamePerfil" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Correo"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/etLastNamePerfil"
+            app:layout_constraintTop_toBottomOf="@+id/etLastNamePerfil" />
 
         <TextView
             android:id="@+id/textCpPerfil"
@@ -76,8 +87,20 @@
             android:text="C.P."
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/editTextLastNamePerfil"
-            app:layout_constraintTop_toBottomOf="@+id/editTextLastNamePerfil" />
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/Correo" />
+
+        <EditText
+            android:id="@+id/Correo"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="textEmailAddress"
+            android:hint="Correo@compañia.com"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <EditText
             android:id="@+id/editCpPerfil"
@@ -90,16 +113,6 @@
             android:inputType="number"
             app:layout_constraintStart_toStartOf="@+id/textCpPerfil"
             app:layout_constraintTop_toBottomOf="@+id/textCpPerfil" />
-
-        <ImageView
-            android:id="@+id/imageViewPerfil"
-            android:layout_width="127dp"
-            android:layout_height="121dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/baseline_person_24" />
 
         <Button
             android:id="@+id/buttonEditPerfil"
@@ -121,6 +134,7 @@
             android:drawableLeft="@android:drawable/ic_menu_save"
             android:enabled="false"
             android:text="GUARDAR"
+            android:textColor="@color/white"
             android:visibility="invisible"
             app:backgroundTint="@color/material_dynamic_neutral50"
             app:layout_constraintEnd_toEndOf="@+id/buttonEditPerfil"

@@ -1,11 +1,10 @@
 package com.gobernanza.pruebalogin;
 
 
-
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -31,7 +30,7 @@ public class ReporteFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 if(v.getId()== R.id.buttonSIAPAME){
-                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_siapameFragment);
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
                 }
             }
         });
@@ -40,7 +39,7 @@ public class ReporteFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.buttonObrasPublicas){
-                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
+                   // Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
                 }
             }
         });
@@ -49,7 +48,7 @@ public class ReporteFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.buttonaAlumbradoPublico){
-                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_alumbradoPublicoFragment);
+                  //  Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
                 }
             }
         });
@@ -58,7 +57,7 @@ public class ReporteFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 if(v.getId() == R.id.buttonAseoPublico){
-                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_aseoPublicoFragment);
+                   // Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
                 }
             }
         });
@@ -67,7 +66,7 @@ public class ReporteFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.buttonPark){
-                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_parkGardenFragment);
+                   // Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
                 }
             }
         });
