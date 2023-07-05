@@ -17,6 +17,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Registro extends AppCompatActivity implements View.OnClickListener {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -85,10 +88,16 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     private void GoToHome(String emaail) {
         Intent secundario = new Intent(this,HomeActivity2.class);
-        secundario.putExtra("nombre", nombre.getText().toString());
+        Map<String, Object> data = new HashMap<>();
+        data.put("name", nombre.getText().toString());
+        data.put("lastName", apellido.getText().toString());
+        data.put("Cp",CP.getText().toString());
+
+        db.collection("users").document(correo.getText().toString()).set(data);
+        //secundario.putExtra("nombre", nombre.getText().toString());
        // secundario.putExtra("apellido", (CharSequence) apellido);
        // secundario.putExtra("cp", (CharSequence) CP);
-        secundario.putExtra("correoEmail", correo.getText().toString());
+        secundario.putExtra("correoEmail", correo.getText().toString().toLowerCase());
         startActivity(secundario);
     }
 

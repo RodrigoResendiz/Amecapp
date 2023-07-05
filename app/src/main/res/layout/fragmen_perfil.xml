@@ -109,6 +109,7 @@
             android:layout_marginTop="16dp"
             android:ems="10"
             android:enabled="false"
+            android:textColor="@color/black"
             android:hint="45685"
             android:inputType="number"
             app:layout_constraintStart_toStartOf="@+id/textCpPerfil"

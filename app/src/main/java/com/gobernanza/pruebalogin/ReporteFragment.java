@@ -12,6 +12,12 @@ import androidx.navigation.Navigation;
 public class ReporteFragment extends Fragment  {
 
     Button btnSiapame, btnObrasPublicas, btnAlumPub, btnAsePub, btnGarden;
+
+   public String NameSiapame = "REPORTE SIAPAME";
+    public String NameObraspublicas = "REPORTE OBRAS PUBLICAS";
+    public String NameAlumPub = "REPORTE ALUMBRADO PUBLICO";
+    public  String NameAseoPub = "REPORTE ASEO PUBLICO";
+    public String NameGarden = "REPORTE PARQUES Y JARDINES";
     public ReporteFragment() {
         super(R.layout.fragment_reporte);
     }
@@ -19,7 +25,7 @@ public class ReporteFragment extends Fragment  {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        Bundle bundle = new Bundle();
         btnSiapame = requireView().findViewById(R.id.buttonSIAPAME);
         btnObrasPublicas = requireView().findViewById(R.id.buttonObrasPublicas);
         btnAlumPub = requireView().findViewById(R.id.buttonaAlumbradoPublico);
@@ -30,7 +36,10 @@ public class ReporteFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 if(v.getId()== R.id.buttonSIAPAME){
-                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
+
+                    bundle.putString("NombreFrame", NameSiapame);
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment,bundle);
+
                 }
             }
         });
@@ -39,7 +48,8 @@ public class ReporteFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.buttonObrasPublicas){
-                   // Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
+                    bundle.putString("NombreFrame", NameObraspublicas);
+                   Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment, bundle);
                 }
             }
         });
@@ -48,7 +58,8 @@ public class ReporteFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.buttonaAlumbradoPublico){
-                  //  Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
+                    bundle.putString("NombreFrame", NameAlumPub);
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment,bundle);
                 }
             }
         });
@@ -57,7 +68,8 @@ public class ReporteFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 if(v.getId() == R.id.buttonAseoPublico){
-                   // Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
+                    bundle.putString("NombreFrame", NameAseoPub);
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment,bundle);
                 }
             }
         });
@@ -66,7 +78,8 @@ public class ReporteFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.buttonPark){
-                   // Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment);
+                    bundle.putString("NombreFrame", NameGarden);
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_dashboard_to_obrasPublicasFragment,bundle);
                 }
             }
         });

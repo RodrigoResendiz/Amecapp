@@ -18,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +35,7 @@ import java.util.ArrayList;
 public class ObrasPublicasFragment extends Fragment {
 
     Button btnCamara, btnGaleria;
+    TextView calis;
 
     Uri imagenUri;
 
@@ -45,6 +47,7 @@ public class ObrasPublicasFragment extends Fragment {
     String path;
 
     private Spinner CatObPub;
+    String NameFrame;
 
     private ArrayList<String> lista = new ArrayList<String>();
     private FusedLocationProviderClient fusedLocationClient;
@@ -56,11 +59,23 @@ public class ObrasPublicasFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        calis = requireView().findViewById(R.id.textViewIdFalla);
+
+
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+           NameFrame = bundle.getString("NombreFrame");
+
+        }
+
+        calis.setText(NameFrame);
 
         //Para cambiar el titutlo de la barra superior cuando es fragment
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("REPORTE OBRAS PUBLICAS ");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(NameFrame);
         btnCamara = requireView().findViewById(R.id.buttonCamera);
         btnGaleria = requireView().findViewById(R.id.buttonGaleria);
+
         if (ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions((Activity) requireContext(),
                     new String[]{android.Manifest.permission.CAMERA,
@@ -165,12 +180,56 @@ public class ObrasPublicasFragment extends Fragment {
 
 
     private void addValores() {
-        lista.add("Seleccione tipo de reporte:");
-        lista.add("Reparacion de rejillas pluvial");
-        lista.add("Repavimentacion");
-        lista.add("Baches");
-        lista.add("Topografia para pavimentacion");
-        lista.add("Otros");
+        if (NameFrame == "REPORTE SIAPAME") {
+            lista.add("Seleccione tipo de reporte: ");
+            lista.add("Bache por fuja");
+            lista.add("Agua contaminada");
+            lista.add("Reparacionde caja de valvulas");
+            lista.add("Fuga de agua potable");
+            lista.add("Drenaje colapsado");
+            lista.add("Alcantarillado sin tapa");
+            lista.add("Fuga de aguas negras");
+            lista.add("Desazolve de drenaje");
+        }else if (NameFrame == "REPORTE OBRAS PUBLICAS"){
+            lista.add("Seleccione tipo de reporte:");
+            lista.add("Reparacion de rejillas pluvial");
+            lista.add("Repavimentacion");
+            lista.add("Baches");
+            lista.add("Topografia para pavimentacion");
+            lista.add("Otros");
+        }else if(NameFrame == "REPORTE ALUMBRADO PUBLICO"){
+            lista.add("Seleccione tipo de reporte: ");
+            lista.add("Lámpara apagada");
+            lista.add("Lámpara prendida 24 horas");
+            lista.add("Lámpara ilumina muy poco");
+            lista.add("Lámppara parpadea (prende y apaga)");
+            lista.add("Circuito apagado");
+            lista.add("Lámpara rota");
+            lista.add("Poste caído o a punto de caer");
+            lista.add("Otros");
+        } else if (NameFrame == "REPORTE ASEO PUBLICO") {
+            lista.add("Seleccione tipo de reporte: ");
+            lista.add("Papelera en mal estado");
+            lista.add("Limpieza de baldios");
+            lista.add("Limpieza superficial de alcantarillas");
+            lista.add("Animal muerto en via publica");
+            lista.add("Vecino saca la basura fuera del horario de recoleccion");
+            lista.add("Papelera saturada");
+            lista.add("El camión recolector no se llevó la basura");
+            lista.add("Basura en via publica");
+            lista.add("Otros");
+        }else if (NameFrame == "REPORTE PARQUES Y JARDINES"){
+            lista.add("Seleccione tipo de reporte");
+            lista.add("Mantenimiento de areas verdes");
+            lista.add("Mantenimiento de camellones");
+            lista.add("Árbol caido o apunto de caer");
+            lista.add("Poda de árbol fuera de domicilio");
+            lista.add("Tala de árbol fuera de domicio");
+            lista.add("Poda de árbol en camellón o área verde");
+            lista.add("Tala de árbol en camellón o área verde");
+            lista.add("Otros");
+        }
+
     }
 
     private void iniciarSpinner() {

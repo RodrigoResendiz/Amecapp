@@ -21,6 +21,7 @@ public class PerfilFragment extends Fragment {
     EditText name, lastName, Cp, email;
 
     //String EmCorreo = emaill;
+    String ValueName, ValueLastName, ValueCp;
 
     public PerfilFragment() {
         super(R.layout.fragmen_perfil);
@@ -31,9 +32,13 @@ public class PerfilFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
+
         Bundle arguments = getArguments();
-        if (arguments != null && arguments.containsKey("correoEmail")) {
+        if (arguments != null) {
              correEmail = arguments.getString("correoEmail");
+             ValueName = arguments.getString("NameValues");
+             ValueLastName = arguments.getString("LastNameValues");
+            ValueCp = arguments.getString("CpValues");
             // Usa el correo electrónico recibido como desees en el Fragment
         }
 
@@ -44,7 +49,10 @@ public class PerfilFragment extends Fragment {
         Cp = requireView().findViewById(R.id.editCpPerfil);
         email = requireView().findViewById(R.id.Correo);
 
-
+        name.setText(ValueName);
+        lastName.setText(ValueLastName);
+        Cp.setText(ValueCp);
+        email.setText(correEmail);
 
         btnEditPerfil.setOnClickListener(new View.OnClickListener() {
             @Override

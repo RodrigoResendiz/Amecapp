@@ -52,6 +52,7 @@
                     android:layout_width="300dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
+                    android:background="#FB754B"
                     android:scrollbarSize="10dp"
                     app:layout_constraintStart_toStartOf="@+id/textViewIdFalla"
                     app:layout_constraintTop_toBottomOf="@+id/textViewIdFalla" />

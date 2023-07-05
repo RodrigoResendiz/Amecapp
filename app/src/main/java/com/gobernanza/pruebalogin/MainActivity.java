@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button Login;
     TextView registro;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Login.setOnClickListener(this);
         registro.setOnClickListener(this);
+
+
 
 
     }
@@ -75,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void GoToHome(String email) {
         Intent intent = new Intent(this,HomeActivity2.class);
-        intent.putExtra("correoEmail",email);
+        intent.putExtra("correoEmail",email.toLowerCase());
         startActivity(intent);
     }
 
