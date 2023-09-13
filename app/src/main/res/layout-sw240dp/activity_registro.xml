@@ -101,5 +101,4 @@
         app:layout_constraintEnd_toEndOf="@+id/ButtonRegistro"
         app:layout_constraintStart_toStartOf="@+id/ButtonRegistro"
         app:layout_constraintTop_toBottomOf="@+id/ButtonRegistro" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

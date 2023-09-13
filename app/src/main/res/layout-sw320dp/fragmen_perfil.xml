@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".PerfilFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/textNamePerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.152"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.064" />
+
+        <EditText
+            android:id="@+id/etNamePerfil"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textNamePerfil"
+            app:layout_constraintTop_toBottomOf="@+id/textNamePerfil" />
+
+        <TextView
+            android:id="@+id/textLastNamePerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Apellido"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/etNamePerfil"
+            app:layout_constraintTop_toBottomOf="@+id/etNamePerfil" />
+
+        <EditText
+            android:id="@+id/etLastNamePerfil"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="56dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Apellido"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textLastNamePerfil"
+            app:layout_constraintTop_toBottomOf="@+id/textLastNamePerfil" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Correo"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/etLastNamePerfil"
+            app:layout_constraintTop_toBottomOf="@+id/etLastNamePerfil" />
+
+        <TextView
+            android:id="@+id/textCpPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="C.P."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/Correo" />
+
+        <EditText
+            android:id="@+id/Correo"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Correo@compañia.com"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/editCpPerfil"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="45685"
+            android:inputType="number"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/textCpPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/textCpPerfil" />
+
+        <Button
+            android:id="@+id/buttonEditPerfil"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@android:drawable/ic_menu_preferences"
+            android:text="EDITAR"
+            app:backgroundTint="@color/material_dynamic_neutral50"
+            app:layout_constraintEnd_toEndOf="@+id/editCpPerfil"
+            app:layout_constraintStart_toStartOf="@+id/editCpPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/editCpPerfil" />
+
+        <Button
+            android:id="@+id/buttonSalvarPerfil"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@android:drawable/ic_menu_save"
+            android:enabled="false"
+            android:text="GUARDAR"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:backgroundTint="@color/material_dynamic_neutral50"
+            app:layout_constraintEnd_toEndOf="@+id/buttonEditPerfil"
+            app:layout_constraintStart_toStartOf="@+id/buttonEditPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/buttonEditPerfil" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

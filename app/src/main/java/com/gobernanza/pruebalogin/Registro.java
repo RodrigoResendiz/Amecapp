@@ -79,8 +79,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     private void showAlert() {
         new AlertDialog.Builder(this)
-                .setTitle("Erro")
-                .setMessage("Se ha producido un error al autenticar el usuario")
+                .setTitle("Error")
+                .setMessage("Se ha producido un error al autenticar el usuario, usuario ya registrado")
                 .setPositiveButton("Aceptar", null)
                 .show();
       //  Toast.makeText(this,"se ha producido un error al autenticar el usuario",Toast.LENGTH_LONG);
