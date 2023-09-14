@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="#FFFFFF"
     tools:context=".PerfilFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,20 +16,19 @@
             android:id="@+id/textNamePerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Nombre"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.152"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.064" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/etNamePerfil"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:enabled="false"
@@ -54,8 +54,8 @@
 
         <EditText
             android:id="@+id/etLastNamePerfil"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="56dp"
             android:ems="10"
@@ -92,8 +92,8 @@
 
         <EditText
             android:id="@+id/Correo"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:enabled="false"
@@ -106,8 +106,8 @@
 
         <EditText
             android:id="@+id/editCpPerfil"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:enabled="false"
@@ -119,8 +119,8 @@
 
         <Button
             android:id="@+id/buttonEditPerfil"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:drawableLeft="@android:drawable/ic_menu_preferences"
             android:text="EDITAR"
@@ -131,8 +131,8 @@
 
         <Button
             android:id="@+id/buttonSalvarPerfil"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:drawableLeft="@android:drawable/ic_menu_save"
             android:enabled="false"
